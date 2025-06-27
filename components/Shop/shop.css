@@ -1,0 +1,348 @@
+/* ------------------ TOASTIFY STYLES ------------------ */
+.Toastify__toast--success {
+  background-color: #96331a !important;
+  color: #fff !important;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+}
+
+.toast-custom {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1rem;
+}
+
+
+/* ------------------ PRODUCT CARD ------------------ */
+.product-card {
+  width: 220px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ------------------ IMAGE WRAPPER ------------------ */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+/* ------------------ HOVER ICON ------------------ */
+.hover-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+}
+
+.product-card:hover .hover-icon {
+  opacity: 1;
+}
+
+.hover-icon.clicked {
+  background-color: #47231A;
+}
+
+.hover-icon.clicked .bag-img {
+  filter: invert(0);
+}
+
+.bag-img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+
+/* ------------------ DISCOUNT TAG ------------------ */
+.discount-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  background-color: #47231A;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+/* ------------------ PRODUCT INFO ------------------ */
+.product-info .product-price {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: gray;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.sale-price {
+  font-weight: bold;
+  color: #47231A;
+}
+
+.sale-price.large {
+  font-size: 25px;
+}
+
+.product-name {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.product-rating {
+  font-size: 14px;
+  color: #7a3220;
+}
+
+.reviews {
+  font-size: 13px;
+  color: gray;
+  margin-left: 4px;
+}
+
+
+/* ------------------ DRAWER (MODAL) ------------------ */
+h2 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+/* Overlay for the drawer */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Drawer itself */
+.drawer {
+  
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80vw;
+  max-width: 500px;
+  height: 100vh;
+  padding: clamp(2vh, 5vh, 6vh) clamp(4vw, 5vw, 6vw) clamp(2vh, 4vh, 5vh);
+  background: white;
+  color: black;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.drawer-overlay.open .drawer {
+  right: 0;
+}
+
+/* Close button */
+.drawer-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Image at the top */
+.drawer-image {
+  width: 100%;
+  max-height: 30vh;
+  object-fit: contain;
+  margin-bottom: 2vh;
+}
+
+/* Scrollable content */
+.drawer-details {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1.5vh;
+}
+
+/* Product title */
+.drawer-details {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  padding-bottom: 4vh; 
+}
+
+
+/* Rating */
+.drawer-details .product-rating {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7a3220;
+  margin-bottom: 1vh;
+}
+
+/* Category */
+.drawer-category {
+  color: #47231A;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5vh;
+}
+
+/* Stock */
+.drawer-stock {
+  color: #a5a4a4;
+  font-size: 0.85rem;
+  margin-bottom: 1vh;
+}
+
+/* Description */
+.drawer-description {
+  max-height: 25vh; 
+  overflow-y: auto;
+  padding-right: 4px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.drawer-cart {
+ flex-shrink: 0;
+  background-color: #47231A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1.2vh;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+/* ------------------ BESTSELLER SECTION ------------------ */
+.bestseller-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 60px auto 20px;
+  padding: 0 40px;
+  font-family: 'Outfit', sans-serif;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bestseller-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #47231A;
+}
+
+.shop-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.shop-link:hover {
+  color: #6b4d3c;
+}
+
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .hover-icon {
+    padding: 16px;
+  }
+
+  .bag-img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+
+  .product-name,
+  .sale-price,
+  .original-price,
+  .product-rating,
+  .reviews {
+    font-size: 13px;
+  }
+
+  .hover-icon {
+    padding: 14px;
+  }
+
+  .bestseller-title {
+    font-size: 24px;
+  }
+
+  .shop-link {
+    font-size: 14px;
+  }
+}

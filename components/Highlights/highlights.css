@@ -1,0 +1,84 @@
+.highlights-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.highlight-card {
+  width: 100%;
+  max-width: 340px;
+  height: 460px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(77, 24, 3, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+  color: white;
+  position: relative;
+}
+
+
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 19, 9, 0.3); 
+  z-index: 1;
+}
+
+.highlight-content {
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.highlight-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.highlight-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight-button {
+  margin-top: 20px;
+  color: white;
+  background-color: #332A21;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+
+@media (min-width: 768px) {
+  .highlight-card {
+    flex: 0 0 calc(33.333% - 20px); 
+  }
+}
+
+@media (max-width: 767px) {
+  .highlight-card {
+    flex: 0 0 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 500px) {
+  .highlight-card {
+    flex: 0 0 100%; 
+  }
+}

@@ -1,0 +1,86 @@
+.site-footer {
+  background: linear-gradient(180deg, #3B3A39 5%, #32271D 100%);
+  color: white;
+  padding: 60px 40px 20px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #D4AF7A;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+
+@media (max-width: 1100px) {
+  .footer-container {
+    padding: 0 60px; 
+  }
+}
